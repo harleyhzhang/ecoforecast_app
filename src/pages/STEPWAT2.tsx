@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../scenes/Navbar";
 import Footer from "../scenes/Footer";
@@ -10,22 +11,21 @@ const STEPWAT2 = () => {
                 <title>About STEPWAT2 | EcoForecast</title>
             </Helmet>
             <Navbar />
-            <div className="sm:w-[750px] mx-auto px-5">
+            <div className="w-full sm:max-w-[750px] mx-auto px-5">
                 <h1 className="text-3xl xs:text-4xl sm:text-5xl mt-28 xs:mt-32 sm:mt-40 font-product-sans-regular mb-4 text-center">About STEPWAT2</h1>
-                <div className="w-[350px] xs:w-[400px] sm:w-[500px] mx-auto">
+                <div className="w-full max-w-[350px] xs:max-w-[400px] sm:max-w-[500px] mx-auto">
                     <p className="mt-6 xs:mt-8 font-product-sans-light-regular text-base xs:text-lg sm:text-xl text-center">An individual-based model for exploring the impact of climate and disturbance on dryland plant communities</p>
                 </div>
 
                 <div className="flex flex-col items-center mt-8 space-y-6 xs:space-y-0 xs:flex-row xs:justify-center xs:space-x-5">
-                    <a
+                    <Button
                         href="https://doi.org/10.1002/ecs2.2394"
-                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-black hover:opacity-90 transition-all duration-300 text-white px-5 py-2 rounded-full"
+                        tone="neutral"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Read the paper
                         <GoArrowUpRight size={15} className="ml-1" />
-                    </a>
+                    </Button>
                     <a
                         href="https://github.com/DrylandEcology/STEPWAT2"
                         className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center relative group"
@@ -84,13 +84,13 @@ const STEPWAT2 = () => {
                     Fire dynamics played a pivotal role, significantly reducing future big sagebrush biomass compared to scenarios with no fire. Perennial C3 grass biomass, however, showed less sensitivity to fire frequency, indicating a quicker recovery post-fire compared to big sagebrush.
                 </p>
             </div>
-            <div className="sm:[w-750px] md:w-[960px] pt-1 pb-12 bg-light-grey ssm:mx-10 md:mx-auto sm:rounded-lg mt-28">
-                <div className="sm:w-[750px] mx-auto px-5">
+            <div className="md:w-[960px] pt-1 pb-12 bg-light-grey ssm:mx-10 md:mx-auto sm:rounded-lg mt-28">
+                <div className="w-full sm:max-w-[750px] mx-auto px-5">
                     <h3 className="text-xl xs:text-2xl font-product-sans-regular mt-8 xs:mt-12 sm:mt-14">
                         References
                     </h3>
                     <p className="mt-6 xs:mt-8 font-product-sans-light-regular text-[.9rem] no-contextual-alternates">
-                        Palmquist, K. A., J. B. Bradford, T. E. Martyn, D. R. Schlaepfer, and W. K. Lauenroth. 2018. STEPWAT2: an individual-based model for exploring the impact of climate and disturbance on dryland plant communities. <span className="font-product-sans-light-italic">Ecosphere</span> 9(8)e02394. <a href="https://doi.org/10.1002/ecs2.2394" className="underline transition-all duration-300 decoration-grey decoration-1 hover:decoration-black" target="_blank" rel="noopener noreferrer">10.1002/ecs2.2394</a>
+                        Palmquist, K. A., J. B. Bradford, T. E. Martyn, D. R. Schlaepfer, and W. K. Lauenroth. 2018. STEPWAT2: an individual-based model for exploring the impact of climate and disturbance on dryland plant communities. <span className="font-product-sans-light-italic">Ecosphere</span> 9(8)e02394. <a href="https://doi.org/10.1002/ecs2.2394" className="underline transition-colors duration-300 decoration-grey decoration-1 hover:decoration-black" target="_blank" rel="noopener noreferrer">10.1002/ecs2.2394</a>
                     </p>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
 import LaunchApp from "./pages/LaunchApp";
