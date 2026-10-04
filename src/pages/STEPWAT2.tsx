@@ -84,7 +84,7 @@ const STEPWAT2 = () => {
                     Fire dynamics played a pivotal role, significantly reducing future big sagebrush biomass compared to scenarios with no fire. Perennial C3 grass biomass, however, showed less sensitivity to fire frequency, indicating a quicker recovery post-fire compared to big sagebrush.
                 </p>
             </div>
-            <div className="sm:md:w-[960px] pt-1 pb-12 bg-light-grey ssm:mx-10 md:mx-auto sm:rounded-lg mt-28">
+            <div className="md:w-[960px] pt-1 pb-12 bg-light-grey ssm:mx-10 md:mx-auto sm:rounded-lg mt-28">
                 <div className="w-full sm:max-w-[750px] mx-auto px-5">
                     <h3 className="text-xl xs:text-2xl font-product-sans-regular mt-8 xs:mt-12 sm:mt-14">
                         References
