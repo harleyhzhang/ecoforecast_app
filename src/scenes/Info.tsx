@@ -29,7 +29,7 @@ const Info = () => {
                 className="my-24"
                 links={<>
                     <LinkWithUnderline href="/stepwat2">Use STEPWAT2 <HiChevronRight size={14} className="ml-1" /></LinkWithUnderline>
-                    <LinkWithUnderline href="/overview">Documentation <GoArrowUpRight size={15} className="ml-1" /></LinkWithUnderline>
+                    <LinkWithUnderline href="https://github.com/DrylandEcology/STEPWAT2/wiki" external>Documentation <GoArrowUpRight size={15} className="ml-1" /></LinkWithUnderline>
                 </>}
             />
 
