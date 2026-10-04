@@ -135,8 +135,8 @@ const GettingStarted = () => {
                 />
             </div>
 
-            <div className="[w-750px] md:w-[1048px] pt-1 pb-12 bg-light-grey mx-5 ssm:mx-10 md:mx-auto rounded-lg mt-28">
-                <div className="sm:w-[750px] mx-auto px-5">
+            <div className="md:w-[1048px] pt-1 pb-12 bg-light-grey mx-5 ssm:mx-10 md:mx-auto rounded-lg mt-28">
+                <div className="w-full sm:max-w-[750px] mx-auto px-5">
                     <h3 className="text-2xl sm:text-4xl font-product-sans-regular px-5 sm:px-16 mt-8 xs:mt-12 sm:mt-14 text-center">
                         Dive into the data and try EcoForecast today.
                     </h3>

@@ -10,9 +10,9 @@ const STEPWAT2 = () => {
                 <title>About STEPWAT2 | EcoForecast</title>
             </Helmet>
             <Navbar />
-            <div className="sm:w-[750px] mx-auto px-5">
+            <div className="w-full sm:max-w-[750px] mx-auto px-5">
                 <h1 className="text-3xl xs:text-4xl sm:text-5xl mt-28 xs:mt-32 sm:mt-40 font-product-sans-regular mb-4 text-center">About STEPWAT2</h1>
-                <div className="w-[350px] xs:w-[400px] sm:w-[500px] mx-auto">
+                <div className="w-full max-w-[350px] xs:max-w-[400px] sm:max-w-[500px] mx-auto">
                     <p className="mt-6 xs:mt-8 font-product-sans-light-regular text-base xs:text-lg sm:text-xl text-center">An individual-based model for exploring the impact of climate and disturbance on dryland plant communities</p>
                 </div>
 
@@ -84,8 +84,8 @@ const STEPWAT2 = () => {
                     Fire dynamics played a pivotal role, significantly reducing future big sagebrush biomass compared to scenarios with no fire. Perennial C3 grass biomass, however, showed less sensitivity to fire frequency, indicating a quicker recovery post-fire compared to big sagebrush.
                 </p>
             </div>
-            <div className="sm:[w-750px] md:w-[960px] pt-1 pb-12 bg-light-grey ssm:mx-10 md:mx-auto sm:rounded-lg mt-28">
-                <div className="sm:w-[750px] mx-auto px-5">
+            <div className="md:w-[960px] pt-1 pb-12 bg-light-grey ssm:mx-10 md:mx-auto sm:rounded-lg mt-28">
+                <div className="w-full sm:max-w-[750px] mx-auto px-5">
                     <h3 className="text-xl xs:text-2xl font-product-sans-regular mt-8 xs:mt-12 sm:mt-14">
                         References
                     </h3>

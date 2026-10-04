@@ -51,6 +51,8 @@ There are no test files or remote CI workflows: run the build before pushing.
   reserves that space before lazy loading; `LinkWithUnderline` owns its shared
   link treatment. `tailwind.config.cjs` owns the existing accent, neutral colors,
   and four used font families; `src/index.css` owns their font-face declarations.
+  Keep TypeScript and TSX in Tailwind’s content patterns: excluding them silently
+  removes the UI utilities from production CSS.
 
 ## Project Context
 
