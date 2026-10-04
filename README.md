@@ -26,6 +26,8 @@ Built with researchers from [Yale School of the Environment](https://environment
 
 ## Running Locally
 
+Use Node.js 24 (also pinned for hosted builds in `package.json`).
+
 ```bash
 npm install
 npm start
