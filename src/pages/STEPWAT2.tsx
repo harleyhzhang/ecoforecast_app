@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../scenes/Navbar";
 import Footer from "../scenes/Footer";
@@ -17,15 +18,14 @@ const STEPWAT2 = () => {
                 </div>
 
                 <div className="flex flex-col items-center mt-8 space-y-6 xs:space-y-0 xs:flex-row xs:justify-center xs:space-x-5">
-                    <a
+                    <Button
                         href="https://doi.org/10.1002/ecs2.2394"
-                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-black hover:opacity-90 transition-opacity duration-300 text-white px-5 py-2 rounded-full"
+                        tone="neutral"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Read the paper
                         <GoArrowUpRight size={15} className="ml-1" />
-                    </a>
+                    </Button>
                     <a
                         href="https://github.com/DrylandEcology/STEPWAT2"
                         className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center relative group"

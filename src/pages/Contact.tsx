@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm, FieldValues } from "react-hook-form";
@@ -97,25 +98,26 @@ const Contact = () => {
                   {...register("message", { required: true })}
                 />
               </div>
-              <button
+              <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-black rounded-full hover:bg-opacity-90 transition-colors duration-300 text-white px-6 py-3"
+                tone="neutral"
               >
                 {isSubmitting ? "Submitting…" : "Submit"}
-              </button>
+              </Button>
               {submitError && <p role="alert" className="mt-4">We couldn't submit your message. Please try again.</p>}
             </form>
           )}
           {!showForm && (
             <div className="w-full max-w-[350px] xs:max-w-[400px] sm:max-w-[500px] mx-auto text-center mt-8">
               <p role="status" className="text-lg">Thank you. Our team is looking forward to connecting with you. You'll hear from us soon!</p>
-              <button
+              <Button
                 onClick={handleRetry}
-                className="mt-4 bg-black rounded-full hover:bg-opacity-90 transition-colors duration-300 text-white px-6 py-3"
+                tone="neutral"
+                className="mt-4"
               >
                 Submit again
-              </button>
+              </Button>
             </div>
           )}
         </div>
