@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
+import type { ImageAsset } from "../assets/featureImages";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 interface FeatureCardProps {
     title: string;
     description: ReactNode;
-    image: string;
+    image: ImageAsset;
     imageAlt: string;
     links?: ReactNode;
     imagePosition?: "left" | "right";
@@ -38,13 +39,15 @@ const FeatureCard = ({ title, description, image, imageAlt, links, imagePosition
         <div className={isDesktop ? "w-1/2 overflow-hidden" : "w-full"}>
             {isDesktop ? (
                 <img
-                    src={image}
+                    {...image}
                     alt={imageAlt}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover ${imagePosition === "left" ? "rounded-l-lg" : "rounded-r-lg"}`}
                 />
             ) : (
                 <div className="w-full overflow-hidden h-[calc(100vw-40px)]">
-                    <img src={image} alt={imageAlt} className="w-full h-full object-cover rounded-b-lg" />
+                    <img {...image} alt={imageAlt} loading="lazy" decoding="async" className="w-full h-full object-cover rounded-b-lg" />
                 </div>
             )}
         </div>

@@ -18,7 +18,7 @@ const TermsOfUse = () => {
                     These Terms of Use apply to your use of the EcoForecast App and EcoForecast's other services for individuals, along with any associated software applications and websites (all together, "Services"). These Terms form an agreement between you and EcoForecast. By using our Services, you agree to these Terms.
                 </p>
                 <p className="mt-4 xs:mt-6 font-product-sans-light-regular text-lg">
-                    Our <a href="/privacy" className="transition-all duration-300 decoration-grey hover:decoration-black decoration-2 underline">Privacy Policy</a> explains how we collect and use personal information. Although it does not form part of these Terms, it is an important document that you should read.
+                    Our <a href="/privacy" className="transition-colors duration-300 decoration-grey hover:decoration-black decoration-2 underline">Privacy Policy</a> explains how we collect and use personal information. Although it does not form part of these Terms, it is an important document that you should read.
                 </p>
 
                 <h3 className="text-xl xs:text-2xl sm:text-3xl font-product-sans-regular mt-8 xs:mt-12 sm:mt-16">Who we are</h3>

@@ -1,4 +1,4 @@
-import backgroundImg from "../assets/Home/landing-bg.png";
+import backgroundImg from "../assets/Home/landing-bg.webp";
 import { GoArrowUpRight } from "react-icons/go";
 
 const Landing = () => {
