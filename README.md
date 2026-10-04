@@ -49,7 +49,11 @@ There are no test files or remote CI workflows: run the build before pushing.
   unless the layout is reviewed at desktop and mobile widths.
 - `src/assets/featureImages.ts` owns feature-image dimensions. `FeatureCard`
   reserves that space before lazy loading; `LinkWithUnderline` owns its shared
-  link treatment. `tailwind.config.cjs` owns the existing accent, neutral colors,
+  link treatment. `Button` owns filled actions: `href` selects a native link;
+  otherwise it renders a native button (default `type="button"`). Use brand or
+  neutral tone and the three existing link sizes; native form buttons retain
+  their roomier padding. Keep only layout margins at call sites.
+  `tailwind.config.cjs` owns the existing accent, neutral colors,
   and four used font families; `src/index.css` owns their font-face declarations.
   Keep TypeScript and TSX in Tailwind’s content patterns: excluding them silently
   removes the UI utilities from production CSS.

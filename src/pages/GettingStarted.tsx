@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import { gettingStartedImages } from "../assets/featureImages";
 import LinkWithUnderline from "../components/LinkWithUnderline";
 import { Helmet } from "react-helmet-async";
@@ -26,15 +27,14 @@ const GettingStarted = () => {
                 <h1 className="text-4xl xs:text-5xl sm:text-6xl mt-28 xs:mt-32 sm:mt-40 font-product-sans-regular mb-4 text-center">Getting started</h1>
 
                 <div className="flex justify-center mt-8">
-                    <a
+                    <Button
                         href="/app"
-                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-blue hover:opacity-90 transition-opacity duration-300 text-white px-5 py-2 rounded-full mr-5"
+                        className="mr-5"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         Start now
                         <GoArrowUpRight size={15} className="ml-1" />
-                    </a>
+                    </Button>
                     <a
                         href="/stepwat2"
                         className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center relative group mr-5"
@@ -141,15 +141,14 @@ const GettingStarted = () => {
                         Dive into the data and try EcoForecast today.
                     </h3>
                     <div className="flex justify-center mt-8">
-                        <a
+                        <Button
                             href="/app"
-                            className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-blue hover:opacity-90 transition-opacity duration-300 text-white px-5 py-2 rounded-full mr-5"
+                            className="mr-5"
                             target="_blank"
-                            rel="noopener noreferrer"
                         >
                             Launch EcoForecast
                             <GoArrowUpRight size={15} className="ml-1" />
-                        </a>
+                        </Button>
                     </div>
                 </div>
             </div>
