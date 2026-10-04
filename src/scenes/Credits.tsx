@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { LazyMotion, MotionConfig, domAnimation, m, useAnimation, type MotionProps } from "framer-motion";
+import { LazyMotion, MotionConfig, domAnimation, m, useAnimation } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 import yale from "../assets/Home/logos/yale.webp";
 import usgs from "../assets/Home/logos/usgs.webp";
@@ -7,9 +7,6 @@ import marshall from "../assets/Home/logos/marshall.webp";
 import utah from "../assets/Home/logos/utah-state.webp";
 import gee from "../assets/Home/logos/google-earth-engine.webp";
 import stepwat2 from "../assets/Home/logos/stepwat2.webp";
-
-const MotionDiv = m.div as React.FC<React.HTMLAttributes<HTMLDivElement> & MotionProps>;
-const MotionImg = m.img as React.FC<React.ImgHTMLAttributes<HTMLImageElement> & MotionProps>;
 
 interface LogoItem {
     url: string;
@@ -96,7 +93,7 @@ const Credits = () => {
                 <div ref={ref} className="mt-20">
                     <div className="sm:mb-10">
                         <h2 className="text-center text-lg sm:text-xl mb-7 text-dark-grey font-product-sans-regular">Made possible by</h2>
-                        <MotionDiv
+                        <m.div
                             className="flex flex-wrap justify-center items-center px-5 md:px-0 pb-6"
                             initial="hidden"
                             animate={controls}
@@ -113,7 +110,7 @@ const Credits = () => {
                                     rel="noopener noreferrer"
                                     className={`opacity-80 px-0 sm:px-10 md:px-16 pb-20 sm:py-0 ${isAboveSmallScreens ? "" : "min-w-[50%]"}`}
                                 >
-                                    <MotionImg
+                                    <m.img
                                         src={logo.url}
                                         width={logo.width}
                                         height={logo.height}
@@ -127,11 +124,11 @@ const Credits = () => {
                                     />
                                 </a>
                             ))}
-                        </MotionDiv>
+                        </m.div>
                     </div>
                     <div>
                         <h2 className="text-center text-lg sm:text-xl mb-7 text-dark-grey font-product-sans-regular">Powered by</h2>
-                        <MotionDiv
+                        <m.div
                             className="flex flex-wrap justify-center items-center px-5 md:px-0 pb-6"
                             initial="hidden"
                             animate={controls}
@@ -148,7 +145,7 @@ const Credits = () => {
                                     rel="noopener noreferrer"
                                     className={`opacity-80 px-10 md:px-16 pb-20 sm:py-0 ${isAboveSmallScreens ? "" : "min-w-[50%]"}`}
                                 >
-                                    <MotionImg
+                                    <m.img
                                         src={logo.url}
                                         width={logo.width}
                                         height={logo.height}
@@ -162,7 +159,7 @@ const Credits = () => {
                                     />
                                 </a>
                             ))}
-                        </MotionDiv>
+                        </m.div>
                     </div>
                 </div>
             </LazyMotion>

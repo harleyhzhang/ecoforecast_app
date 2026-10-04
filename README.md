@@ -19,6 +19,7 @@ Built with researchers from [Yale School of the Environment](https://environment
 
 - React
 - TypeScript
+- Vite
 - Tailwind CSS
 - Framer Motion
 - Google Earth Engine
@@ -29,24 +30,26 @@ Built with researchers from [Yale School of the Environment](https://environment
 Use Node.js 24 (also pinned for hosted builds in `package.json`).
 
 ```bash
-npm install
+npm ci
 npm start
 ```
 
-Open `http://localhost:3000` to view the app.
+Open `http://localhost:3000` to view the app. `npm run build` typechecks and
+bundles the app into `build/`; `npm run preview` serves that production output.
+There are no test files or remote CI workflows: run the build before pushing.
 
 ## Assets and shared UI
 
 - Import application images from `src/assets`; `public/assets` owns only the
   stable favicon URLs used by the HTML and manifest. Do not duplicate imported
-  images in `public`, because Create React App copies those into every build.
+  images in `public`, because Vite copies those into every build.
 - Use lossless WebP for screenshots and transparent logos, preserving UI text
   and alpha exactly (`cwebp -lossless -exact -m 6 input.png -o output.webp`).
   Photos use WebP quality 85–90. Keep dimensions and aspect ratios unchanged
   unless the layout is reviewed at desktop and mobile widths.
 - `src/assets/featureImages.ts` owns feature-image dimensions. `FeatureCard`
   reserves that space before lazy loading; `LinkWithUnderline` owns its shared
-  link treatment. `tailwind.config.js` owns the existing accent, neutral colors,
+  link treatment. `tailwind.config.cjs` owns the existing accent, neutral colors,
   and four used font families; `src/index.css` owns their font-face declarations.
 
 ## Project Context
