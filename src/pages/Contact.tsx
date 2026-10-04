@@ -12,8 +12,9 @@ interface ContactFormData {
 }
 
 const Contact = () => {
-  const { register, handleSubmit, reset } = useForm<ContactFormData>();
+  const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm<ContactFormData>();
   const [showForm, setShowForm] = useState(true);
+  const [submitError, setSubmitError] = useState(false);
 
   const { submit: onSubmitWeb3Forms } = useWeb3Forms({
     access_key: "17eb3a6c-79d4-4872-8186-91716a32d0ec",
@@ -26,19 +27,23 @@ const Contact = () => {
       setShowForm(false);
     },
     onError: (msg: string) => {
+      setSubmitError(true);
       console.error("Error submitting form:", msg);
     },
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    setSubmitError(false);
     try {
       await onSubmitWeb3Forms(data as FieldValues);
     } catch (error) {
+      setSubmitError(true);
       console.error("Error submitting form:", error);
     }
   };
 
   const handleRetry = () => {
+    setSubmitError(false);
     setShowForm(true);
   };
 
@@ -54,8 +59,8 @@ const Contact = () => {
           Contact our team
         </h1>
         <div className="text-center">
-          <p className="mt-6 xs:mt-8 font-product-sans-light-regular text-md xs:text-lg sm:text-xl text-center">
-            We"re happy to answer questions and get you acquainted with EcoForecast, including connecting you with helpful resources and exploring use cases for your team.
+          <p className="mt-6 xs:mt-8 font-product-sans-light-regular text-base xs:text-lg sm:text-xl text-center">
+            We're happy to answer questions and get you acquainted with EcoForecast, including connecting you with helpful resources and exploring use cases for your team.
           </p>
         </div>
         <div className="text-sm font-product-sans-light-regular mt-24">
@@ -65,6 +70,8 @@ const Contact = () => {
                 <label htmlFor="contact-name" className="block mb-1">Name *</label>
                 <input
                   type="text"
+                  required
+                  autoComplete="name"
                   className="w-full border-grey rounded-md p-2 focus:border-black border focus:outline-none transition duration-300"
                   id="contact-name"
                   {...register("name", { required: true })}
@@ -74,6 +81,8 @@ const Contact = () => {
                 <label htmlFor="contact-email" className="block mb-1">Email *</label>
                 <input
                   type="email"
+                  required
+                  autoComplete="email"
                   className="w-full border-grey rounded-md p-2 focus:border-black border focus:outline-none transition duration-300"
                   id="contact-email"
                   {...register("email", { required: true })}
@@ -82,6 +91,7 @@ const Contact = () => {
               <div className="mb-8">
                 <label htmlFor="contact-message" className="block mb-1">Message *</label>
                 <textarea
+                  required
                   className="w-full border-grey rounded-md p-2 h-52 resize-none focus:border-black border focus:outline-none transition duration-300"
                   id="contact-message"
                   {...register("message", { required: true })}
@@ -89,15 +99,17 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="bg-black rounded-full hover:bg-opacity-90 transition-colors duration-300 text-white px-6 py-3"
               >
-                Submit
+                {isSubmitting ? "Submitting…" : "Submit"}
               </button>
+              {submitError && <p role="alert" className="mt-4">We couldn't submit your message. Please try again.</p>}
             </form>
           )}
           {!showForm && (
-            <div className="w-[350px] xs:w-[400px] sm:w-[500px] mx-auto text-center mt-8">
-              <p className="text-lg">Thank you. Our team is looking forward to connecting with you. You'll hear from us soon!</p>
+            <div className="w-full max-w-[350px] xs:max-w-[400px] sm:max-w-[500px] mx-auto text-center mt-8">
+              <p role="status" className="text-lg">Thank you. Our team is looking forward to connecting with you. You'll hear from us soon!</p>
               <button
                 onClick={handleRetry}
                 className="mt-4 bg-black rounded-full hover:bg-opacity-90 transition-colors duration-300 text-white px-6 py-3"
