@@ -19,7 +19,7 @@ const STEPWAT2 = () => {
                 <div className="flex flex-col items-center mt-8 space-y-6 xs:space-y-0 xs:flex-row xs:justify-center xs:space-x-5">
                     <a
                         href="https://doi.org/10.1002/ecs2.2394"
-                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-black hover:opacity-90 transition-all duration-300 text-white px-5 py-2 rounded-full"
+                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-black hover:opacity-90 transition-opacity duration-300 text-white px-5 py-2 rounded-full"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -90,7 +90,7 @@ const STEPWAT2 = () => {
                         References
                     </h3>
                     <p className="mt-6 xs:mt-8 font-product-sans-light-regular text-[.9rem] no-contextual-alternates">
-                        Palmquist, K. A., J. B. Bradford, T. E. Martyn, D. R. Schlaepfer, and W. K. Lauenroth. 2018. STEPWAT2: an individual-based model for exploring the impact of climate and disturbance on dryland plant communities. <span className="font-product-sans-light-italic">Ecosphere</span> 9(8)e02394. <a href="https://doi.org/10.1002/ecs2.2394" className="underline transition-all duration-300 decoration-grey decoration-1 hover:decoration-black" target="_blank" rel="noopener noreferrer">10.1002/ecs2.2394</a>
+                        Palmquist, K. A., J. B. Bradford, T. E. Martyn, D. R. Schlaepfer, and W. K. Lauenroth. 2018. STEPWAT2: an individual-based model for exploring the impact of climate and disturbance on dryland plant communities. <span className="font-product-sans-light-italic">Ecosphere</span> 9(8)e02394. <a href="https://doi.org/10.1002/ecs2.2394" className="underline transition-colors duration-300 decoration-grey decoration-1 hover:decoration-black" target="_blank" rel="noopener noreferrer">10.1002/ecs2.2394</a>
                     </p>
                 </div>
             </div>

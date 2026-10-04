@@ -62,31 +62,34 @@ const Contact = () => {
           {showForm && (
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-8">
-                <label className="block mb-1">Name *</label>
+                <label htmlFor="contact-name" className="block mb-1">Name *</label>
                 <input
                   type="text"
                   className="w-full border-grey rounded-md p-2 focus:border-black border focus:outline-none transition duration-300"
+                  id="contact-name"
                   {...register("name", { required: true })}
                 />
               </div>
               <div className="mb-8">
-                <label className="block mb-1">Email *</label>
+                <label htmlFor="contact-email" className="block mb-1">Email *</label>
                 <input
                   type="email"
                   className="w-full border-grey rounded-md p-2 focus:border-black border focus:outline-none transition duration-300"
+                  id="contact-email"
                   {...register("email", { required: true })}
                 />
               </div>
               <div className="mb-8">
-                <label className="block mb-1">Message *</label>
+                <label htmlFor="contact-message" className="block mb-1">Message *</label>
                 <textarea
                   className="w-full border-grey rounded-md p-2 h-52 resize-none focus:border-black border focus:outline-none transition duration-300"
+                  id="contact-message"
                   {...register("message", { required: true })}
                 />
               </div>
               <button
                 type="submit"
-                className="bg-black rounded-full hover:bg-opacity-90 transition-all duration-300 text-white px-6 py-3"
+                className="bg-black rounded-full hover:bg-opacity-90 transition-colors duration-300 text-white px-6 py-3"
               >
                 Submit
               </button>
@@ -97,7 +100,7 @@ const Contact = () => {
               <p className="text-lg">Thank you. Our team is looking forward to connecting with you. You'll hear from us soon!</p>
               <button
                 onClick={handleRetry}
-                className="mt-4 bg-black rounded-full hover:bg-opacity-90 transition-all duration-300 text-white px-6 py-3"
+                className="mt-4 bg-black rounded-full hover:bg-opacity-90 transition-colors duration-300 text-white px-6 py-3"
               >
                 Submit again
               </button>

@@ -1,36 +1,13 @@
+import { gettingStartedImages } from "../assets/featureImages";
+import LinkWithUnderline from "../components/LinkWithUnderline";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../scenes/Navbar";
 import Footer from "../scenes/Footer";
 import FeatureCard from "../components/FeatureCard";
-import PlantFunctional from "../assets/GettingStarted/plant-functional.png";
-import TimePeriod from "../assets/GettingStarted/time-period.png";
-import GrazingWildfire from "../assets/GettingStarted/grazing-wildfire.png";
-import DrawShape from "../assets/GettingStarted/draw-shape.png";
-import Rectangle from "../assets/GettingStarted/rectangle.png";
-import Download from "../assets/GettingStarted/download.png";
-import DataViewer from "../assets/GettingStarted/data-viewer.png";
-import Manager from "../assets/GettingStarted/manager.png";
 import { ReactNode } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiChevronRight } from "react-icons/hi2";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-
-interface LinkWithUnderlineProps {
-    href: string;
-    external?: boolean;
-    children: ReactNode;
-}
-
-const LinkWithUnderline = ({ href, external, children }: LinkWithUnderlineProps) => (
-    <a
-        href={href}
-        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="flex items-center relative group"
-    >
-        {children}
-        <span className="absolute left-0 bottom-[-2px] w-full h-[1px] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-    </a>
-);
 
 const SectionHeading = ({ children }: { children: ReactNode }) => (
     <h1 className="text-3xl xs:text-4xl sm:text-5xl mt-24 xs:mt-28 sm:mt-32 font-product-sans-regular text-center">
@@ -51,7 +28,7 @@ const GettingStarted = () => {
                 <div className="flex justify-center mt-8">
                     <a
                         href="/app"
-                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-blue hover:opacity-90 transition-all duration-300 text-white px-5 py-2 rounded-full mr-5"
+                        className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-blue hover:opacity-90 transition-opacity duration-300 text-white px-5 py-2 rounded-full mr-5"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -74,7 +51,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Plant functional type"
                     description="Use the checkbox to choose from big sagebrush, perennial C3 grasses, perennial C4 grasses, perennial grasses, annual C3 grasses, and forbs. Check all relevant species."
-                    image={PlantFunctional}
+                    image={gettingStartedImages.plantFunctional}
                     imageAlt="Plant functional type"
                     className="mb-24 mt-12"
                 />
@@ -82,7 +59,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Time period and scenario"
                     description="Choose from three time periods—current (1981-2010), mid-century (2031-2060), and end-century (2071-2100)—and two climate change scenarios, RCP4.5 (a less severe trajectory) and RCP8.5 (a more extreme trajectory)."
-                    image={TimePeriod}
+                    image={gettingStartedImages.timePeriod}
                     imageAlt="Time period and scenario"
                     className="my-24"
                     links={
@@ -95,7 +72,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Grazing and wildfire"
                     description="EcoForecast can simulate various grazing levels and incorporate wildfire scenarios. Providing inputs based on specific grazing conditions or wildfire susceptibility in your area of interest."
-                    image={GrazingWildfire}
+                    image={gettingStartedImages.grazingWildfire}
                     imageAlt="Grazing and wildfire"
                     className="mt-24 mb-12"
                 />
@@ -110,7 +87,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Draw a shape"
                     description="Press Draw and use the cursor to click points encircling your area of interest. Once finished, click the first point again to complete the selection."
-                    image={DrawShape}
+                    image={gettingStartedImages.drawShape}
                     imageAlt="Draw a shape"
                     className="mb-24 mt-12"
                 />
@@ -118,7 +95,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Produce a rectangle"
                     description="Enter the latitude and longitude coordinates of the North-East (top right) and south west (bottom left) vertices of a rectangular area of interest."
-                    image={Rectangle}
+                    image={gettingStartedImages.rectangle}
                     imageAlt="Produce a rectangle"
                     className="my-24"
                 />
@@ -129,7 +106,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Get download link"
                     description="Press Download to generate a download link. The link contains a compressed ZIP file containing TIF rasters of all the selected layers within the area(s) of interest. If no area(s) of interest were selected, the images will cover the entire layer."
-                    image={Download}
+                    image={gettingStartedImages.download}
                     imageAlt="Generate a download link"
                     className="my-12"
                 />
@@ -144,7 +121,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Data viewer"
                     description={<>Use the data viewer to either click a data point on the map or enter the coordinates of a point to see the data for all selected layers. Use the&nbsp;<FaArrowUpRightFromSquare size={17} className="inline-block pb-[3px]" />&nbsp;button to view the full size chart or download it as a CSV, SVG, or PNG.</>}
-                    image={DataViewer}
+                    image={gettingStartedImages.dataViewer}
                     imageAlt="Data viewer"
                     className="mb-24 mt-12"
                 />
@@ -152,7 +129,7 @@ const GettingStarted = () => {
                 <FeatureCard
                     title="Geometry imports and layers managers"
                     description="Use the geometry imports and layers managers to hide or show shapes or data layers. Unchecking a layer does not delete it, only hides it from view."
-                    image={Manager}
+                    image={gettingStartedImages.manager}
                     imageAlt="Geometry and layers managers"
                     className="my-24"
                 />
@@ -166,7 +143,7 @@ const GettingStarted = () => {
                     <div className="flex justify-center mt-8">
                         <a
                             href="/app"
-                            className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-blue hover:opacity-90 transition-all duration-300 text-white px-5 py-2 rounded-full mr-5"
+                            className="font-product-sans-light-regular text-[.85rem] sm:text-sm tracking-wide flex items-center bg-blue hover:opacity-90 transition-opacity duration-300 text-white px-5 py-2 rounded-full mr-5"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
